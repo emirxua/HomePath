@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Section */
+.site-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Yatayda değil, dikey hizalama için column */
+    justify-content: center; /* Her şeyin ortalanmasını sağlar */
+    align-items: center; /* Yatayda ortalar */
+    height: 100px; /* Header yüksekliğini küçülttük */
+}
+
+/* Container for logo and homepath */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Logo ile HomePath arasındaki boşluk */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.homepath-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    line-height: 1.2; /* Başlığın hizalanmasını düzenler */
+}
+
+/* Navbar (Menu) */
+.navbar {
+    margin-top: 10px; /* Navbar ile başlık arasındaki mesafe */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Property Search link özel renk */
+.nav-list li a[href="search.html"] {
+    color: #cc4400; /* Koyu turuncu renk */
+}
+
+.nav-list li a:hover {
+    color: #ff5722;
+}
+
+
+/* Property Search Section */
+.search-section {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+    display: block;
+    min-height: 60vh;
+}
+
+.search-section h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.search-buttons button {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+}
+
+.search-buttons button:hover {
+    background-color: #e6b800;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Media Queries for Mobile Deavices */
+
+/* Mobile Responsiveness - For screens smaller than 768px */
+@media (max-width: 768px) {
+
+    /* Header section: Adjust logo and heading alignment */
+    .site-header {
+        flex-direction: column; /* Stack logo and heading vertically */
+        height: auto;
+        padding: 15px 20px; /* Adjust padding */
+        gap: 10px;
+    }
+
+    .logo {
+        width: 35px; /* Smaller logo for mobile */
+    }
+
+    .homepath-heading {
+        font-size: 2rem; /* Smaller heading */
+        text-align: center;
+    }
+
+    /* Navbar adjustments */
+    .nav-list {
+        flex-direction: column; /* Stack navbar items vertically */
+        gap: 10px; /* Reduced gap between links */
+    }
+
+    .nav-list li a {
+        font-size: 1rem; /* Slightly smaller font for mobile */
+    }
+
+    /* Property search section */
+    .search-section {
+        padding: 30px 20px; /* Reduced padding */
+    }
+
+    .search-buttons button {
+        font-size: 1rem; /* Adjust button text size */
+    }
+
+    .image-placeholder {
+        margin-top: 20px; /* Reduced margin */
+    }
+}
+
+/* Mobile Responsiveness - For screens smaller than 480px */
+@media (max-width: 480px) {
+
+    /* Header section adjustments for very small screens */
+    .homepath-heading {
+        font-size: 1.6rem; /* Even smaller font size */
+    }
+
+    .logo {
+        width: 30px; /* Further reduce logo size */
+    }
+
+    /* Navbar adjustments */
+    .nav-list {
+        gap: 8px; /* Smaller gap between links */
+    }
+
+    .nav-list li a {
+        font-size: 0.9rem; /* Even smaller text for very small screens */
+    }
+
+    /* Property list title and buttons */
+    .property-list h2 {
+        font-size: 20px; /* Smaller title */
+    }
+
+    .search-buttons button {
+        font-size: 0.9rem; /* Smaller button font */
+        padding: 12px 25px; /* Adjusted padding for smaller screens */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 12px 0; /* Slightly smaller footer padding */
+    }
+}
